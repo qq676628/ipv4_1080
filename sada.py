@@ -1,7 +1,7 @@
 from git import Repo
 
 # 本地仓库路径
-repo_path = 'L:\Mr.Chen 设计环境\影视相关\ipv4'
+repo_path = 'L:\\Mr.Chen 设计环境\\影视相关\\ipv4'
 
 # 打开仓库
 repo = Repo(repo_path)
