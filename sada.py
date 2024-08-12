@@ -1,17 +1,16 @@
-from git import Repo
-
-# 本地仓库路径
+import subprocess
+import os
+# 仓库路径
 repo_path = 'L:/Mr.Chen 设计环境/影视相关/ipv4'
 
-# 打开仓库
-repo = Repo(repo_path)
+# 切换到仓库目录
+os.chdir(repo_path)
 
-# 添加所有更改的文件
-repo.git.add('--all')
+# 添加文件
+subprocess.run(["git", "add", "--all"])
 
 # 提交更改
-repo.index.commit("提交消息")
+subprocess.run(["git", "commit", "-m", "提交消息"])
 
 # 推送到远程仓库
-origin = repo.remote(name='origin')
-origin.push()
+subprocess.run(["git", "push", "origin", "main"])
